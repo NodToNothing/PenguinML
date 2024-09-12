@@ -19,9 +19,10 @@ if penguin_file is None:
 
     rf_pickle.close()
     map_pickle.close()
+    penguin_df = pd.read_csv("penguins.csv")
 
 else:
-    penguin_df = pd.read_csv("penguins.csv")
+    penguin_df = pd.read_csv(penguin_file)
     # print(penguin_df.head())
 
     penguin_df.dropna(inplace=True)
